@@ -3,14 +3,14 @@
     package="com.borisovskiy.daggermvpapp">
 
     <application
-        android:name="com.borisovskiy.daggermvpapp.ui.base.App"
+        android:name="com.borisovskiy.daggermvpapp.ui.main.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.base.MainActivity">
+        <activity android:name=".ui.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,8 +18,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.base.SecondActivity"
-            android:parentActivityName=".ui.base.MainActivity"></activity>
+            android:name=".ui.main.SecondActivity"
+            android:parentActivityName=".ui.main.MainActivity"></activity>
     </application>
 
 </manifest>

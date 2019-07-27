@@ -1,7 +1,7 @@
 package com.borisovskiy.daggermvpapp.di.modules;
 
 import com.borisovskiy.daggermvpapp.di.scopes.ActivityScope;
-import com.borisovskiy.daggermvpapp.ui.base.FragmentInSecondActivity;
+import com.borisovskiy.daggermvpapp.ui.main.FragmentStringContent;
 
 import dagger.Module;
 import dagger.Provides;
@@ -11,7 +11,7 @@ public class FragmentModules {
 
     @ActivityScope // Пометили сущность, созданную дагером.
     @Provides
-    public FragmentInSecondActivity getFragment() {
-        return new FragmentInSecondActivity();
+    public FragmentStringContent getFragment() {
+        return new FragmentStringContent();
     }
 }

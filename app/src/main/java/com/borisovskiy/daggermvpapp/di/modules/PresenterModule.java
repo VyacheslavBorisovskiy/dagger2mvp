@@ -1,10 +1,10 @@
 package com.borisovskiy.daggermvpapp.di.modules;
 
 import com.borisovskiy.daggermvpapp.di.scopes.FragmentScope;
-import com.borisovskiy.daggermvpapp.ui.Contract;
-import com.borisovskiy.daggermvpapp.ui.Model;
-import com.borisovskiy.daggermvpapp.ui.Presenter;
-import com.borisovskiy.daggermvpapp.ui.base.FragmentInSecondActivity;
+import com.borisovskiy.daggermvpapp.ui.ModelStr;
+import com.borisovskiy.daggermvpapp.ui.StringContract;
+import com.borisovskiy.daggermvpapp.ui.PresenterString;
+import com.borisovskiy.daggermvpapp.ui.main.FragmentStringContent;
 
 import dagger.Module;
 import dagger.Provides;
@@ -14,7 +14,7 @@ public abstract class PresenterModule {
 
     @FragmentScope
     @Provides
-    public static Contract.IPresenter getPresenter(FragmentInSecondActivity fragment, Model model) {
-        return new Presenter(fragment, model);
+    public static StringContract.IPresenter getPresenter(FragmentStringContent fragment, ModelStr modelStr) {
+        return new PresenterString(fragment, modelStr);
     }
 }

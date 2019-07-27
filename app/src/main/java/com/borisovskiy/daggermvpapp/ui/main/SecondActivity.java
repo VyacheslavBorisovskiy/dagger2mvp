@@ -1,4 +1,4 @@
-package com.borisovskiy.daggermvpapp.ui.base;
+package com.borisovskiy.daggermvpapp.ui.main;
 
 import android.os.Bundle;
 
@@ -19,7 +19,7 @@ public class SecondActivity extends AppCompatActivity implements HasSupportFragm
     @Inject
     DispatchingAndroidInjector<Fragment> fragmentInjector;
     @Inject
-    FragmentInSecondActivity fragment;
+    FragmentStringContent fragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -4,6 +4,6 @@
     android:id="@+id/activitysecond"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.base.SecondActivity">
+    tools:context=".ui.main.SecondActivity">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

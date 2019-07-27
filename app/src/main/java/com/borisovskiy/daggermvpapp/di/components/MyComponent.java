@@ -2,7 +2,7 @@ package com.borisovskiy.daggermvpapp.di.components;
 
 import android.app.Application;
 
-import com.borisovskiy.daggermvpapp.ui.base.App;
+import com.borisovskiy.daggermvpapp.ui.main.App;
 import com.borisovskiy.daggermvpapp.di.modules.AppModule;
 
 import javax.inject.Singleton;

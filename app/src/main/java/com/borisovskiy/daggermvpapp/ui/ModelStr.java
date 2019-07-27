@@ -1,13 +1,14 @@
 package com.borisovskiy.daggermvpapp.ui;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 import javax.inject.Inject;
 
-public class Model implements Contract.IModel {
+public class ModelStr implements StringContract.IModel {
 
-    private List<String> items = Arrays.asList(
+    private List<String> listOfStrings = Arrays.asList(
             "Peter Piper picked a peck of pickled peppers\n" +
                     "A peck of pickled peppers Peter Piper picked\n" +
                     "If Peter Piper picked a peck of pickled peppers\n" +
@@ -19,12 +20,22 @@ public class Model implements Contract.IModel {
             "I saw Susie sitting in a shoeshine shop"
     );
 
+    private List<Integer> listOfIntegers = new ArrayList<>();
+
+
     @Inject
-    public Model() {
+    public ModelStr() {
     }
 
     @Override
-    public List<String> getItems() {
-        return items;
+    public List<String> getListOfStrings() {
+        return listOfStrings;
+    }
+
+    public List<Integer> getListOfIntegers() {
+        for (int i = 0; i < listOfIntegers.size(); i++) {
+            listOfIntegers.add(i * 100);
+        }
+        return listOfIntegers;
     }
 }

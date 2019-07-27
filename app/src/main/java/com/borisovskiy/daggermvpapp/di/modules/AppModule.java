@@ -2,9 +2,9 @@ package com.borisovskiy.daggermvpapp.di.modules;
 
 import com.borisovskiy.daggermvpapp.di.scopes.ActivityScope;
 import com.borisovskiy.daggermvpapp.di.scopes.FragmentScope;
-import com.borisovskiy.daggermvpapp.ui.base.FragmentInSecondActivity;
-import com.borisovskiy.daggermvpapp.ui.base.MainActivity;
-import com.borisovskiy.daggermvpapp.ui.base.SecondActivity;
+import com.borisovskiy.daggermvpapp.ui.main.FragmentStringContent;
+import com.borisovskiy.daggermvpapp.ui.main.MainActivity;
+import com.borisovskiy.daggermvpapp.ui.main.SecondActivity;
 
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;
@@ -22,6 +22,6 @@ public interface AppModule {
 
     @FragmentScope
     @ContributesAndroidInjector(modules = {PresenterModule.class})
-    FragmentInSecondActivity contributesPresenter();
+    FragmentStringContent contributesPresenter();
 
 }

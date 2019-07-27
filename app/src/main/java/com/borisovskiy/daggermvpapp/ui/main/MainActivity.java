@@ -1,4 +1,4 @@
-package com.borisovskiy.daggermvpapp.ui.base;
+package com.borisovskiy.daggermvpapp.ui.main;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -25,12 +25,11 @@ public class MainActivity extends AppCompatActivity implements HasSupportFragmen
     @Inject
     DispatchingAndroidInjector<Fragment> fragmentInjector;
     @Inject
-    FragmentInSecondActivity fragment;
+    FragmentStringContent fragment;
 
     @BindView(R.id.button)
     Button button;
     private Unbinder unbinder;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

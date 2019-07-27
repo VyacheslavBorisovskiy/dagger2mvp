@@ -1,4 +1,4 @@
-package com.borisovskiy.daggermvpapp.ui.base;
+package com.borisovskiy.daggermvpapp.ui.main;
 
 import android.app.Activity;
 import android.app.Application;

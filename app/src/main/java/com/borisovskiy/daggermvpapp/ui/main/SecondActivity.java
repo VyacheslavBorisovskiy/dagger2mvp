@@ -19,7 +19,7 @@ public class SecondActivity extends AppCompatActivity implements HasSupportFragm
     @Inject
     DispatchingAndroidInjector<Fragment> fragmentInjector;
     @Inject
-    FragmentStringContent fragment;
+    FragmentString fragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -1,20 +1,21 @@
 package com.borisovskiy.daggermvpapp.ui;
 
-import com.borisovskiy.daggermvpapp.ui.base.BaseMvpFragmentContract;
+import com.borisovskiy.daggermvpapp.ui.base.BaseContract;
+import com.borisovskiy.daggermvpapp.ui.base.BasePresenter;
 
 import java.util.List;
 
 public interface StringContract {
 
-    interface IView extends BaseMvpFragmentContract.IView {
+    public interface IView extends BaseContract.IView {
         void setData(List<String> items);
     }
 
-    interface IModel extends BaseMvpFragmentContract.IModel{
+    public interface IModel extends BaseContract.IModel{
         List<String> getListOfStrings();
     }
 
-    interface IPresenter extends BaseMvpFragmentContract.IPresenter<StringContract.IView> {
+    public interface IPresenter extends BaseContract.IPresenter<StringContract.IView, StringContract.IModel> {
 
     }
 }

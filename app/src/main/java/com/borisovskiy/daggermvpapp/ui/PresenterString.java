@@ -2,18 +2,23 @@ package com.borisovskiy.daggermvpapp.ui;
 
 import com.borisovskiy.daggermvpapp.ui.StringContract.IModel;
 import com.borisovskiy.daggermvpapp.ui.StringContract.IView;
-import com.borisovskiy.daggermvpapp.ui.base.BaseMvpFragmentPresenter;
+import com.borisovskiy.daggermvpapp.ui.base.BasePresenter;
 
-public class PresenterString extends BaseMvpFragmentPresenter<StringContract.IView, StringContract.IModel>
+public class PresenterString extends BasePresenter<StringContract.IView, StringContract.IModel>
         implements StringContract.IPresenter {
 
-    private IView view;
-    private IModel model;
+//    private IView view;
+//    private IModel model;
 
-    public PresenterString(IView view, IModel model, IView view1, IModel model1) {
+//    public PresenterString(IView view, IModel model) {
+//        super(view, model);
+////        this.view = view1;
+////        this.model = model1;
+//    }
+
+
+    public PresenterString(IView view, IModel model) {
         super(view, model);
-        this.view = view1;
-        this.model = model1;
     }
 
     @Override

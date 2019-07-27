@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity implements HasSupportFragmen
     @Inject
     DispatchingAndroidInjector<Fragment> fragmentInjector;
     @Inject
-    FragmentStringContent fragment;
+    FragmentString fragment;
 
     @BindView(R.id.button)
     Button button;

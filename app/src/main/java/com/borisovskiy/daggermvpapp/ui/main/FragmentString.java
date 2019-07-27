@@ -25,7 +25,7 @@ import butterknife.ButterKnife;
 import butterknife.Unbinder;
 import dagger.android.support.AndroidSupportInjection;
 
-public class FragmentStringContent extends Fragment implements StringContract.IView {
+public class FragmentString extends Fragment implements StringContract.IView {
 
     private final RecViewAdapterString recViewAdapter = new RecViewAdapterString();
     @BindView(R.id.recview_string)

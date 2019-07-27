@@ -1,6 +1,5 @@
 package com.borisovskiy.daggermvpapp.ui;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -20,8 +19,6 @@ public class ModelStr implements StringContract.IModel {
             "I saw Susie sitting in a shoeshine shop"
     );
 
-    private List<Integer> listOfIntegers = new ArrayList<>();
-
 
     @Inject
     public ModelStr() {
@@ -32,10 +29,5 @@ public class ModelStr implements StringContract.IModel {
         return listOfStrings;
     }
 
-    public List<Integer> getListOfIntegers() {
-        for (int i = 0; i < listOfIntegers.size(); i++) {
-            listOfIntegers.add(i * 100);
-        }
-        return listOfIntegers;
-    }
+
 }

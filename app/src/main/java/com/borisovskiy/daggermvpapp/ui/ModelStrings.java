@@ -5,7 +5,7 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-public class Model implements Contract.IModel {
+public class ModelStrings implements ContractStrings.IModel {
 
     private List<String> items = Arrays.asList(
             "Peter Piper picked a peck of pickled peppers\n" +
@@ -20,7 +20,7 @@ public class Model implements Contract.IModel {
     );
 
     @Inject
-    public Model() {
+    public ModelStrings() {
     }
 
     @Override

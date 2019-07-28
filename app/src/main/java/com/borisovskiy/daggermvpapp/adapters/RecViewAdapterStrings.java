@@ -15,7 +15,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class RecViewAdapter extends RecyclerView.Adapter<RecViewAdapter.RecViewHolder> {
+public class RecViewAdapterStrings extends RecyclerView.Adapter<RecViewAdapterStrings.RecViewHolder> {
 
     private List<String> items;
 

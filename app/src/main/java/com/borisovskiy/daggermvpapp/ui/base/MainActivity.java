@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity implements HasSupportFragmen
     @Inject
     DispatchingAndroidInjector<Fragment> fragmentInjector;
     @Inject
-    FragmentInSecondActivity fragment;
+    FragmentStrings fragment;
 
     @BindView(R.id.button)
     Button button;
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements HasSupportFragmen
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        AndroidInjection.inject(this); // метода находит все @Inject и осущ-т все зависимости для this
+        AndroidInjection.inject(this); // метод находит все @Inject и осущ-т все зависимости для this
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         unbinder = ButterKnife.bind(this);

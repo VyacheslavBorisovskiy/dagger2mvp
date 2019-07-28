@@ -2,7 +2,7 @@ package com.borisovskiy.daggermvpapp.ui;
 
 import java.util.List;
 
-public interface Contract {
+public interface ContractStrings {
 
     interface IView{
         void setData(List<String> items);

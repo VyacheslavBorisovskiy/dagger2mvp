@@ -12,9 +12,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.borisovskiy.daggermvpapp.R;
-import com.borisovskiy.daggermvpapp.adapters.RecViewAdapter;
-import com.borisovskiy.daggermvpapp.ui.Contract;
-import com.borisovskiy.daggermvpapp.ui.Contract.IPresenter;
+import com.borisovskiy.daggermvpapp.adapters.RecViewAdapterStrings;
+import com.borisovskiy.daggermvpapp.ui.ContractStrings;
+import com.borisovskiy.daggermvpapp.ui.ContractStrings.IPresenter;
 
 import java.util.List;
 
@@ -25,28 +25,31 @@ import butterknife.ButterKnife;
 import butterknife.Unbinder;
 import dagger.android.support.AndroidSupportInjection;
 
-public class FragmentInSecondActivity extends Fragment implements Contract.IView {
+public class FragmentStrings extends Fragment implements ContractStrings.IView {
 
-    private final RecViewAdapter recViewAdapter = new RecViewAdapter();
-    @BindView(R.id.recview)
+    private final RecViewAdapterStrings adapter = new RecViewAdapterStrings();
+    @BindView(R.id.recview_strings)
     RecyclerView recyclerView;
     @Inject
     IPresenter presenter;
-
     private Unbinder unbinder;
+
+    public static FragmentStrings newInstance() {
+        return new FragmentStrings();
+    }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         AndroidSupportInjection.inject(this);
         super.onCreate(savedInstanceState);
         setRetainInstance(true);
-//        presenter = new Presenter(this, new Model());
+//        presenter = new PresenterStrings(this, new ModelStrings());
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_sec_activity, container, false);
+        View view = inflater.inflate(R.layout.fragment_strings, container, false);
         unbinder = ButterKnife.bind(this, view);
         initialiseRecView();
         return view;
@@ -54,7 +57,7 @@ public class FragmentInSecondActivity extends Fragment implements Contract.IView
 
     private void initialiseRecView() {
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        recyclerView.setAdapter(recViewAdapter);
+        recyclerView.setAdapter(adapter);
     }
 
     @Override
@@ -66,7 +69,7 @@ public class FragmentInSecondActivity extends Fragment implements Contract.IView
 
     @Override
     public void setData(List<String> items) {
-        recViewAdapter.setItems(items);
+        adapter.setItems(items);
     }
 
     @Override

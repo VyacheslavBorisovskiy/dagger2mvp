@@ -20,7 +20,8 @@ public interface AppModule {
     @ActivityScope
     @ContributesAndroidInjector(modules =
             {FragmentIntModules.class,
-            FragmentStringModules.class})
+            FragmentStringModules.class,
+            SecondActivityModule.class})
     SecondActivity contributesSecondActivity();
 
     @FragmentScope

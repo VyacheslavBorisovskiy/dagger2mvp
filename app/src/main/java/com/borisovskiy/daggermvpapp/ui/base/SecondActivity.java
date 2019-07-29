@@ -27,7 +27,8 @@ public class SecondActivity extends AppCompatActivity implements HasSupportFragm
     FragmentStrings fragmentStrings;
     @Inject
     FragmentIntegers fragmentIntegers;
-
+    @Inject
+    PagerAdapter pagerAdapter;
     @BindView(R.id.tab_layout)
     TabLayout tabLayout;
     @BindView(R.id.pager)
@@ -69,7 +70,7 @@ public class SecondActivity extends AppCompatActivity implements HasSupportFragm
     }
 
     private void initialisePaging() {
-        PagerAdapter pagerAdapter = new PagerAdapter(getSupportFragmentManager());
+//        PagerAdapter pagerAdapter = new PagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(pagerAdapter);
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
     }
